@@ -3,6 +3,7 @@ import '../components/answer_button.dart';
 import '../components/question_label.dart';
 import '../models/quiz.dart';
 import '../models/question.dart';
+import '../pages/score_page.dart';
 
 class QuizPage extends StatefulWidget {
   @override
@@ -28,7 +29,7 @@ class _QuizPageState extends State<QuizPage> {
     setState(() {
       Question nextQuestion = quiz.nextQuestion();
       if (nextQuestion == null) {
-        print("Should go to score page");
+        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ScorePage(quiz.score, quiz.totalQuestion)));
         return;
       }
       currentQuestion = nextQuestion;

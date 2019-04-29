@@ -25,8 +25,8 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Let's Quiz", style: TextStyle(fontSize: 60, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
-              Text("Tap to start", style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
+              Text("Let's Quiz", style: TextStyle(fontSize: 80, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
+              Text("Tap to start", style: TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
             ],
           )
         ),

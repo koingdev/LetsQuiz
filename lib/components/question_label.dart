@@ -48,7 +48,7 @@ class _QuestionLabelState extends State<QuestionLabel> with SingleTickerProvider
           child: Container(
             child: Text(
               "Q: " + widget.questionTitle + "?",
-              style: TextStyle(fontSize: 60 * _animation.value, fontFamily: 'Helvetica-Neue', color: Colors.blueGrey)
+              style: TextStyle(fontSize: 60 * _animation.value, fontFamily: 'Helvetica-Neue', color: Colors.blueGrey, fontWeight: FontWeight.bold)
             ),
           ),
         ),

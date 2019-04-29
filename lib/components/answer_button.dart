@@ -17,7 +17,7 @@ class AnswerButton extends StatelessWidget {
           onTap: onTap,
           child: Center(
             child: Container(
-              child: Text(title, style: TextStyle(fontSize: 30, fontFamily: 'Helvetica-Neue', color: Colors.white)),
+              child: Text(title, style: TextStyle(fontSize: 40, fontFamily: 'Helvetica-Neue', color: Colors.white, fontWeight: FontWeight.bold)),
             ),
           ),
         ),
