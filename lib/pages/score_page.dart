@@ -17,6 +17,7 @@ class ScorePage extends StatelessWidget {
         children: <Widget>[
           Text("Your Score: ", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 60.0, fontFamily: 'Helvetica-Neue')),
           Text(score.toString() + "/" + totalQuestion.toString(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 60.0, fontFamily: 'Helvetica-Neue')),
+          Padding(padding: EdgeInsets.only(top: 20)),
           IconButton(
             icon: Icon(Icons.arrow_right),
             color: Colors.white,

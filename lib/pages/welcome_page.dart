@@ -11,11 +11,11 @@ class WelcomePage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
+            begin: Alignment.topRight,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.red[100],
-              Colors.red[200],
+              Colors.orange[100],
+              Colors.orange[300],
               Colors.red[400]
             ]
           )
@@ -25,8 +25,8 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Let's Quiz", style: TextStyle(fontSize: 80, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
-              Text("Tap to start", style: TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
+              Text("Let's Quiz", style: TextStyle(fontSize: 80, color: Colors.orange[100], fontWeight: FontWeight.bold, fontFamily: 'Futura')),
+              Text("Tap to start", style: TextStyle(fontSize: 40, color: Colors.orange[200], fontWeight: FontWeight.bold, fontFamily: 'Futura')),
             ],
           )
         ),
