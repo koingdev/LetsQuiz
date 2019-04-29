@@ -8,16 +8,28 @@ class WelcomePage extends StatelessWidget {
     // hide status bar
     SystemChrome.setEnabledSystemUIOverlays([]);
     return Material(
-      color: Colors.pink[200],
-      child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => QuizPage())),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text("Let's Quiz", style: TextStyle(fontSize: 50, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
-            Text("Tap to start", style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
-          ],
-        )
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.red[100],
+              Colors.red[200],
+              Colors.red[400]
+            ]
+          )
+        ),
+        child: InkWell(
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => QuizPage())),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("Let's Quiz", style: TextStyle(fontSize: 60, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
+              Text("Tap to start", style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Futura')),
+            ],
+          )
+        ),
       ),
     );
   }

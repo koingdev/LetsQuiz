@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import './pages/welcome_page.dart';
+import './pages/quiz_page.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: WelcomePage(),
-    theme: ThemeData.light(),
+    home: QuizPage(),
     debugShowCheckedModeBanner: false,
   ));
 }
