@@ -18,7 +18,7 @@ class _QuizPageState extends State<QuizPage> {
   @override
   void initState() {
     super.initState();
-    logic = QuizPageLogic(quiz: Quiz.mockData());
+    logic = QuizPageLogic();
     logic.didFinishAnswer = () {
       setState(() {
         Question nextQuestion = logic.nextQuestion;

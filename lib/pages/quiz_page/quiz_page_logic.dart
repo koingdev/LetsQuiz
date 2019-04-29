@@ -1,21 +1,26 @@
 import 'dart:ui';
 import 'package:lets_quiz/models/question.dart';
 import 'package:lets_quiz/models/quiz.dart';
+import 'package:lets_quiz/pages/quiz_page/quiz_page_repository.dart';
 
 class QuizPageLogic {
 
   Quiz quiz;
   Question currentQuestion;
 
-  // Callback
-  VoidCallback didFinishAnswer;
-
   // Getter
   Question get nextQuestion => quiz.nextQuestion();
   int get score => quiz.score;
   int get totalQuestion => quiz.totalQuestion;
 
-  QuizPageLogic({this.quiz}) {
+  // Dependency
+  QuizPageRepositoryType repository;
+
+  // Callback
+  VoidCallback didFinishAnswer;
+
+  QuizPageLogic({this.repository = const QuizPageRepository()}) {
+    quiz = repository.fetchQuiz();
     currentQuestion = nextQuestion;
   }
 
