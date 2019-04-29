@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lets_quiz/pages/quiz_page/quiz_page_logic.dart';
 import 'package:lets_quiz/components/answer_button.dart';
 import 'package:lets_quiz/components/question_label.dart';
-import 'package:lets_quiz/models/quiz.dart';
 import 'package:lets_quiz/models/question.dart';
 import 'package:lets_quiz/pages/score_page.dart';
 
