@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './quiz_page.dart';
+import './quiz_page/quiz_page.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
