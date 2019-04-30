@@ -20,7 +20,6 @@ class _QuestionLabelState extends State<QuestionLabel> with SingleTickerProvider
     super.initState();
     _animationController = AnimationController(duration: Duration(milliseconds: 500), vsync: this);
     _animation = CurvedAnimation(parent: _animationController, curve: Curves.bounceOut);
-    _animation.addListener(() => this.setState(() => {}));
     _animationController.forward();
   }
 
@@ -46,9 +45,17 @@ class _QuestionLabelState extends State<QuestionLabel> with SingleTickerProvider
       child: Material(
         child: Center(
           child: Container(
-            child: Text(
-              "Q: " + widget.questionTitle + "?",
-              style: TextStyle(fontSize: 60 * _animation.value, fontFamily: 'Helvetica-Neue', color: Colors.blueGrey, fontWeight: FontWeight.bold)
+            child: AnimatedBuilder(
+              child: Text("Q: " + widget.questionTitle + "?",
+                style: TextStyle(fontSize: 60, fontFamily: 'Helvetica-Neue', color: Colors.blueGrey, fontWeight: FontWeight.bold)
+              ),
+              animation: _animation,
+              builder: (context, child) {
+                return Transform.scale(
+                  scale: 1.2 * _animation.value,
+                  child: child,
+                );
+              }
             ),
           ),
         ),
